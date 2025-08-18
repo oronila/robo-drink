@@ -54,12 +54,12 @@ def open_serial_connection(port: str) -> serial.Serial:
 
 
 def activate_solenoid(ser: serial.Serial) -> None:
-    print("Solenoid ON")
+    print("Valve open")
     ser.write(b"1")
 
 
 def deactivate_solenoid(ser: serial.Serial) -> None:
-    print("Solenoid OFF")
+    print("Valve closed")
     ser.write(b"0")
 
 
